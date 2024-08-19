@@ -2,6 +2,12 @@
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import SocialX from "@/assets/social-x.svg";
+import SocialInsta from "@/assets/social-insta.svg";
+import SocialLinkedIn from "@/assets/social-linkedin.svg";
+import SocialPin from "@/assets/social-pin.svg";
+import SocialYoutube from "@/assets/social-youtube.svg";
 
 const pricingTiers = [
   {
@@ -55,19 +61,26 @@ const pricingTiers = [
   },
 ];
 
-export const Pricing = () => {
+export const GetInTouch = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container">
         <div className="section-heading">
-          <h2 className="section-title mt-5 ">Pricing</h2>
+          <h2 className="section-title mt-5 ">Get In Touch</h2>
           <p className="section-description">
-            Free forever, Upgrade for unlimited tasks, better security, and
-            exclusive features
+            If you have any inquiries, collaboration opportunities, or simply
+            want to connect, I'd love to hear from you!
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
+        <div className="flex justify-center gap-20 mt-6">
+          <SocialX href="" />
+          <SocialInsta href="" />
+          <SocialLinkedIn href="" />
+          <SocialPin href="" />
+          <SocialYoutube href="" />
+        </div>
+        {/* <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map(
             ({
               title,
@@ -138,7 +151,7 @@ export const Pricing = () => {
               </div>
             )
           )}
-        </div>
+        </div> */}
       </div>
     </section>
   );
