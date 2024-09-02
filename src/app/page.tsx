@@ -20,7 +20,7 @@ export default function Home() {
       {/* <Pricing /> */}
       {/* <Testimonials /> */}
       <GetInTouch />
-      <CallToAction />
+      <CallToAction starImageSrc={""} springImageSrc={""} />
       <Footer />
     </>
   );

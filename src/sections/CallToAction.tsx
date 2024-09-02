@@ -7,7 +7,15 @@ import SocialMail from "@/assets/mail.jpeg";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-export const CallToAction = () => {
+interface CallToActionProps {
+  starImageSrc: string;
+  springImageSrc: string;
+}
+
+export const CallToAction: React.FC<CallToActionProps> = ({
+  starImageSrc,
+  springImageSrc,
+}) => {
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -39,7 +47,7 @@ export const CallToAction = () => {
             your progress and motivate your efforts */}
           </p>
           <motion.img
-            src={starImage.src}
+            src={starImageSrc}
             alt="Star Image"
             width={360}
             className="absolute -left-[350px] -top-[137px]"
@@ -48,7 +56,7 @@ export const CallToAction = () => {
             }}
           />
           <motion.img
-            src={springImage.src}
+            src={springImageSrc}
             alt="Spring Image"
             width={360}
             className="absolute -right-[331px] -top-[19px]"
